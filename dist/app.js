@@ -343,7 +343,7 @@ window.addEventListener('load', () => {
     const game = new Game();
     const score = new Score();
     
-    settings.init({ speed: 5, winLength: 10 });
+    settings.init({ speed: 5, winLength: 50 });
     snake.init(settings);
     board.init(settings, snake);
     food.init(settings, snake, board);
@@ -356,6 +356,7 @@ window.addEventListener('load', () => {
     food.setNewFood();
     game.run();
 });
+
 class Menu {
     constructor() {
         this.startBtnEl = document.getElementById('startBtn');
